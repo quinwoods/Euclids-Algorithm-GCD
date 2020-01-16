@@ -8,14 +8,14 @@
 
 #include <iostream>
 
+int main(int argc, const char * argv[]) {
+    int eGCD(int num1, int num2);
+    std::cout<< eGCD(60, 24);
+    
+}
+
 int eGCD(int m, int n){
     if(n == 0)
-        return 0;
-    return eGCD(m, m % n);
+        return m;
+    return eGCD(n, m % n);
 }
-
-
-int main(int argc, const char * argv[]) {
-    std:: cout << eGCD(60, 24);
-}
-
