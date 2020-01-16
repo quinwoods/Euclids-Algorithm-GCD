@@ -8,8 +8,14 @@
 
 #include <iostream>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+int eGCD(int m, int n){
+    if(n == 0)
+        return 0;
+    return eGCD(m, m % n);
 }
+
+
+int main(int argc, const char * argv[]) {
+    std:: cout << eGCD(60, 24);
+}
+
